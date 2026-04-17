@@ -1,14 +1,14 @@
 # Greek App Twitch
-# Version 2.4.0 "MVP"
+# V1.3.0 Stable
 ---
 
-• Advanced Multi-Stream Twitch App
-• Multi Stream Live & Vods
-• Streamlink & vod-sync
-• Fontend React Framework
-• Backend NODE.JS
-☆ Selfhost or 
-☆ Connect to our Running App
+* Advanced Multi-Stream Twitch App
+* Multi Stream LIVE & VOD
+* Integrated Streamlink & vod-sync
+* Fontend React
+* Backend NODE.JS
+* Selfhost
+* Or Connect to our Running App
 
 ---
 
@@ -16,18 +16,19 @@
 
 
 # Name --------->  GreekAppTwitch
-# Version -------> V2.4.0 "MVP" 
+# Version -------> V1.3.0
 # Type ----------->  PWA
-# Built With ----> Node.js 24+
+# Built With ----> Node.js
+# NW.JS
 # Javascript
 # HTML
-# React 19
+# React
 # Built By -------->  Multi Tools
 # Thanks to -------> 
 
----> Streamlink Twitch GUI <---
----> twitch-vod-sync <---
----> Streamlink <---
+* Streamlink Twitch GUI 
+* twitch-vod-sync
+* Streamlink
 
 ---
 
