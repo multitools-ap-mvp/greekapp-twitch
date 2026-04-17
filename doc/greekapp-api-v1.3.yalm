@@ -1,3 +1,25 @@
+openapi: 3.0.3
+info:
+  title: GreekApp API v1.0
+  description: 'Multi Stream Twitch App.'
+  contact: MultiTools
+    name: GreekApp Twitch
+    url: https://greekapp.apexmultitools.se/
+  license: Open Source
+    name: This documentation is licensed under a CC4.0-BY-SA license.
+    url: https://creativecommons.org/licenses/by-sa/4.0/
+  termsOfService: https://swagger.io/terms/
+  version: 1.0.0
+externalDocs:
+  description: Read the complete docs
+  url: https://greekapp.apexmultitools.se/
+servers:
+  - url: https://greekapp.apexmultitools.se/api/v1
+    description: "GreekApp API v1.0"
+tags: V1.3.0 stable
+
+# Endpoints
+
 # Check if streamlink is installed
 GET /streamlink/api/check
 
@@ -20,3 +42,22 @@ DELETE /streamlink/api/sessions/<id>
 
 # Kill all sessions
 DELETE /streamlink/api/sessions
+
+---
+// GET /health returns a JSON snapshot of all services:
+--- 
+
+---
+```
+#{
+  "status": "ok",
+  "version": "1.3.0",
+  "timestamp": "2026-04-17T12:00:00.000Z",
+  "services": {
+    "vod_sync":   { "path": "/vod-sync",   "available": true },
+    "streamlink": { "path": "/streamlink", "installed": true, "active_sessions": 2 }
+  }
+}
+```
+
+---
