@@ -12,7 +12,8 @@
 
 ---
 
-<img width="1024" height="1536" alt="Greeklogo" src="https://github.com/user-attachments/assets/87dfbf0e-303c-4667-b738-f561070a9562" />
+<img width="849" height="878" alt="Greeklogo" src="https://github.com/user-attachments/assets/40665840-cfd6-4aef-9ea8-dfefb7711de6" />
+
 
 
 # Name --------->  GreekAppTwitch
