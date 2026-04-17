@@ -61,7 +61,7 @@ GreekApp Twitch is a self-hosted PWA served entirely from a single Node.js proce
 exposes it through a built-in web controller at `/streamlink`.
 
 ```
-Browser / PWA
+  GreekApp 
      │
      ▼
 Node.js  (server.js, port 3000)
@@ -135,9 +135,30 @@ npm run dev
 ## 🔴 Live Multi-Stream (Streamlink)
 
 The "Multi Stream LIVE" button opens your **Streamlink GUI** in a popup window.
-You need to be running a Streamlink GUI server (e.g. [streamlink-twitch-gui](https://github.com/streamlink/streamlink-twitch-gui)) on your machine or a server.
+Our Node Backemd is running a Streamlink GUI server (e.g. [streamlink-twitch-gui](https://github.com/streamlink/streamlink-twitch-gui))
 
 Set the URL: edit `CONFIG.STREAMLINK_URL` in `app.html` or set env var `STREAMLINK_URL`.
+---
+```
+# Streamlink Web Controller
+
+Accessible at http://localhost:3000/streamlink
+The controller opens in a popup window when users click Multi Stream LIVE in the PWA.
+
+## Features:
+* Status indicator — shows if streamlink is installed and its version
+Fetch Qualities — queries available stream qualities for any URL before launching
+
+* Launch Stream — spawns streamlink <url> <quality> --player <player>
+
+* Active Sessions — live list of all running streams, auto-refreshes every 5 seconds
+
+* Kill controls — stop individual sessions or all at once
+
+* Log viewer — per-session stdout/stderr tail (last 500 lines)
+```
+
+---
 
 Users can then select streams in the Streamlink GUI and open them in VLC or any media player.
 
@@ -145,13 +166,13 @@ Users can then select streams in the Streamlink GUI and open them in VLC or any 
 
 ## 🎬 VOD Sync
 
-The "VOD Sync" button opens the `remram44/twitch-vod-sync` app served by your Node backend at `/vod-sync`. This opens in a popup window (not a browser).
+The "VOD Sync" button opens the `remram44/twitch-vod-sync` app served by our Node backend at `/vod-sync`. This opens in a popup window (not a browser).
 
 ---
 
 ## Selfhost 🔒 Deployment
 
-For production, point your domain to the Node.js server and optionally use nginx as a reverse proxy with HTTPS. The PWA **requires HTTPS** for full functionality on mobile devices.
+You can set your own domain to the Node.js server and optionally use nginx as a reverse proxy with HTTPS. The PWA **requires HTTPS** for full functionality on mobile devices.
 
 ```nginx
 server {
@@ -218,4 +239,5 @@ https://github.com/multitools-ap-mvp
 ---
 
 # Link to WebApp
-https://apexmultitools.se/GreekAppTwitch
+https://greekapp.apexmultitools.se/
+
