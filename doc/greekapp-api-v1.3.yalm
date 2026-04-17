@@ -1,0 +1,22 @@
+# Check if streamlink is installed
+GET /streamlink/api/check
+
+# List qualities for a stream
+GET /streamlink/api/qualities?url=https://twitch.tv/channel
+
+# Start a stream
+POST /streamlink/api/start
+Content-Type: application/json
+{ "url": "https://twitch.tv/channel", "quality": "best", "player": "vlc" }
+
+# List all sessions
+GET /streamlink/api/sessions
+
+# Get logs for a session
+GET /streamlink/api/sessions/<id>/logs
+
+# Kill a session
+DELETE /streamlink/api/sessions/<id>
+
+# Kill all sessions
+DELETE /streamlink/api/sessions
