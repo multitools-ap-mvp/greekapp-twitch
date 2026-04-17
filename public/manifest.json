@@ -1,0 +1,42 @@
+{
+  "name": "GreekApp Twitch",
+  "short_name": "GreekApp",
+  "description": "Ultimate Multi-Stream Twitch App with VOD Sync & Streamlink Integration",
+  "start_url": "/app.html",
+  "display": "standalone",
+  "background_color": "#0d001f",
+  "theme_color": "#0d001f",
+  "orientation": "any",
+  "categories": ["entertainment", "utilities"],
+  "icons": [
+    {
+      "src": "resources/Greeklogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "resources/Greeklogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Live Multi-Stream",
+      "short_name": "Live",
+      "description": "Open Streamlink live multi-stream",
+      "url": "/app.html?mode=live",
+      "icons": [{ "src": "resources/Greeklogo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "VOD Sync",
+      "short_name": "VOD",
+      "description": "Open VOD synchronization player",
+      "url": "/app.html?mode=vod",
+      "icons": [{ "src": "resources/Greeklogo.png", "sizes": "192x192" }]
+    }
+  ]
+}
