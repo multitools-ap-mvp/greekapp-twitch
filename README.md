@@ -52,6 +52,33 @@ greekapp-twitch/
 ├── package.json
 └── README.md
 ```
+## Overview
+
+GreekApp Twitch is a self-hosted PWA served entirely from a single Node.js process.
+
+ — the backend spawns Streamlink directly and
+exposes it through a built-in web controller at `/streamlink`.
+
+```
+Browser / PWA
+     │
+     ▼
+Node.js  (server.js, port 3000)
+  ├── /                  → redirect → /app.html
+  ├── /app.html          → PWA toolbar app
+  ├── /landingpage.html  → install landing page
+  ├── /manifest.json     → PWA manifest
+  ├── /sw.js             → service worker
+  ├── /health            → JSON status of all services
+  ├── /vod-sync          → twitch-vod-sync (static, cloned locally)
+  └── /streamlink        → Streamlink web controller UI + REST API
+         ├── GET  /streamlink/api/check
+         ├── GET  /streamlink/api/qualities?url=
+         ├── POST /streamlink/api/start
+         ├── GET  /streamlink/api/sessions
+         ├── GET  /streamlink/api/sessions/:id/logs
+         └── DELETE /streamlink/api/sessions[/:id]
+```
 
 ---
 
