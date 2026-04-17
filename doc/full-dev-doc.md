@@ -1,4 +1,4 @@
-# GreekApp Twitch PWA — Deployment Guide
+# GreekApp Twitch PWA — Deployment Guide to Selfhost
 > Version 1.3.0 · ApexMultiTools
 
 ---
