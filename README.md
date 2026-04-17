@@ -34,18 +34,23 @@
 
 ## 📁 File Structure
 
+
+
+## Directory Structure
+
 ```
-/
-├── public/                  ← Your web root (served by Node)
-│   ├── app.html             ← Main PWA app
-│   ├── landingpage.html     ← Landing / download page
-│   ├── manifest.json        ← PWA manifest
-│   ├── sw.js                ← Service worker (offline cache)
+greekapp-twitch/
+├── public/                   ← web root, served as static files
+│   ├── app.html              ← PWA main app
+│   ├── landingpage.html      ← landing / install page
+│   ├── manifest.json         ← PWA web manifest
+│   ├── sw.js                 ← service worker
 │   └── resources/
-│       └── Greeklogo.png    ← App icon
-├── vod-sync-app/            ← twitch-vod-sync clone (see setup)
-├── server.js                ← Node.js backend
-└── package.json
+│       └── Greeklogo.png     ← app icon
+├── vod-sync-app/             ← cloned twitch-vod-sync (see step 3)
+├── server.js                 ← Node.js backend (everything runs from here)
+├── package.json
+└── README.md
 ```
 
 ---
