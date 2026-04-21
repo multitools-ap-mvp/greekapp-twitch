@@ -1,0 +1,14 @@
+test endpoint 
+http://greekapp.apexmultitools.se/health
+{
+  "status": "ok",
+  "version": "1.3.0",
+  "timestamp": "2026-04-17T12:00:00.000Z",
+  "services": {
+    "vod_sync":   { "path": "/vod-sync",   "available": true },
+    "streamlink": { "path": "/streamlink", "installed": true, "active_sessions": 2 }
+  }
+}
+
+
+
