@@ -1,5 +1,5 @@
 // GreekApp Twitch - Service Worker
-const CACHE_NAME = 'greekapp-v1.2.0';
+const CACHE_NAME = 'greekapp-v1.3.0';
 const STATIC_ASSETS = [
     '/app.html',
     '/manifest.json',
