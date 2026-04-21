@@ -1,4 +1,4 @@
-# GreekApp Twitch PWA — Deployment Guide to Selfhost
+# GreekApp Twitch PWA — Deployment Guide.
 > Version 1.3.0 · ApexMultiTools
 
 ---
@@ -96,12 +96,6 @@ Verify:
 streamlink --version
 ```
 
-### 3. Clone VOD Sync app
-
-```bash
-git clone https://github.com/remram44/twitch-vod-sync.git vod-sync-app
-```
-
 ```
 public/
 ├── app.html
@@ -164,7 +158,7 @@ $env:PORT=8080; $env:DEFAULT_PLAYER="vlc"; node server.js
 
 Accessible at `http://localhost:3000/streamlink`
 
-The controller opens in a popup window when users click **Multi Stream LIVE** in the PWA.
+The controller opens in a window when users click **Multi Stream LIVE**
 
 **Features:**
 - **Status indicator** — shows if streamlink is installed and its version
@@ -207,17 +201,15 @@ DELETE /streamlink/api/sessions
 
 Accessible at `http://localhost:3000/vod-sync`
 
-Served from the cloned `vod-sync-app/` directory as a static site.
-The PWA opens this in a popup window when users click **VOD Sync**.
-
-If the directory is missing, visiting `/vod-sync` shows a friendly error with the clone command.
+Served from the cloned and moded `vod-sync-app/` directory as a static site.
+Opens in a popup window when users click **VOD Sync**.
 
 ---
 
 ## Installing the PWA
 
 **Desktop (Chrome / Edge / Brave):**
-Visit `http://yourserver/landingpage.html` → click **Install Now** → browser install prompt appears.
+Visit `http://localhost:3000/landingpage.html` → click **Install Now** → browser install prompt appears.
 Or click the install icon (⊕) in the browser address bar.
 
 **Android:**
@@ -227,11 +219,12 @@ Visit the landing page in Chrome → tap **Install Now** → **Add to Home Scree
 Visit the landing page in Safari → tap the **Share** button → **Add to Home Screen**.
 > PWA install banners are not available on iOS Safari; the landing page shows the share instructions automatically.
 
-> **Important:** PWA install requires **HTTPS** on any real domain. `
+> **Important:** PWA App install requires **HTTPS** on any real domain. `
 
 ---
 
 ## Production Deployment (with HTTPS)
+## If you want to Selfhost
 
 Use nginx as a reverse proxy in front of Node:
 
@@ -292,7 +285,7 @@ pm2 startup
 }
 ```
 
-The PWA app pings this endpoint every 30 seconds to show the backend status indicator.
+The App pings this endpoint every 30 seconds to show the backend status indicator.
 
 ---
 
